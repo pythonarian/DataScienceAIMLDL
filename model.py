@@ -7,8 +7,8 @@ from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import StandardScaler
 
 # Load data
-from sklearn.datasets import load_boston
-data = load_boston()
+
+data = pd.read_csv("boston.csv")
 
 df = pd.DataFrame(data.data, columns=data.feature_names)
 df['MEDV'] = data.target
