@@ -10,8 +10,8 @@ from sklearn.preprocessing import StandardScaler
 
 data = pd.read_csv("boston.csv")
 
-df = pd.DataFrame(data.data, columns=data.feature_names)
-df['MEDV'] = data.target
+df = pd.DataFrame(data, columns=data.columns)
+#df['MEDV'] = data.target
 
 # Log transform
 df['MEDV_trans'] = np.log(df['MEDV'])
