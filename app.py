@@ -22,12 +22,11 @@ DIS = st.number_input("Distance", 0.0)
 RAD = st.number_input("Accessibility", 0.0)
 TAX = st.number_input("Tax Rate", 0.0)
 PTRATIO = st.number_input("Pupil-Teacher Ratio", 0.0)
-B = st.number_input("Black Index", 0.0)
 LSTAT = st.number_input("Lower Status %", 0.0)
 
 if st.button("Predict"):
     input_data = np.array([[CRIM, ZN, INDUS, CHAS, NOX, RM, AGE,
-                            DIS, RAD, TAX, PTRATIO, B, LSTAT]])
+                            DIS, RAD, TAX, PTRATIO, LSTAT]])
 
     input_scaled = scaler.transform(input_data)
 
